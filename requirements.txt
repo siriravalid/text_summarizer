@@ -1,0 +1,30 @@
+transformers  # For fetching and using Hugging Face transformer models (BERT, T5, GPT, etc.)
+transformers[sentencepiece]  # Required for tokenization of models like T5, BART, and MarianMT
+
+datasets  # Provides NLP datasets from Hugging Face, useful for training and evaluation  
+sacrebleu  # BLEU score evaluation metric for text generation tasks (e.g., machine translation)  
+rouge_score  # ROUGE metric for evaluating text summarization and other NLP tasks  
+
+py7zr  # Handles .7z archive files, useful for extracting compressed datasets  
+pandas  # Data manipulation and processing (e.g., loading datasets, preprocessing text)  
+nltk  # Natural Language Toolkit for text preprocessing (e.g., tokenization, stopwords)  
+tqdm  # Displays progress bars for loops and iterative tasks  
+
+PyYAML  # Parses YAML files, useful for managing configuration files  
+matplotlib  # Visualization library for plotting results and model performance metrics  
+
+torch  # PyTorch, the deep learning framework required for training NLP models  
+notebook  # Supports Jupyter Notebook environment for interactive development  
+
+boto3  # AWS SDK for Python, used for interacting with S3 and other AWS services  
+mypy-boto3-s3  # Type hints for Boto3 S3, improving code quality and autocomplete  
+
+python-box==6.0.2  # Enables dot-access for dictionaries, simplifying config management  
+ensure==1.0.2  # Ensures type safety and data validation  
+
+fastapi==0.78.0  # Web framework for building API endpoints to serve NLP models  
+uvicorn==0.18.3  # ASGI server to run FastAPI applications  
+
+Jinja2==3.1.2  # Template engine for rendering dynamic HTML responses in APIs  
+
+-e .  # Installs the project in editable mode for development  

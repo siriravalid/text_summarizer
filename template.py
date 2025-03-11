@@ -31,19 +31,21 @@ list_of_files = [
 ]
 
 
-for filepath in list_of_files:
-    filepath = Path(filepath)
-    filedir, filename = os.path.split(filepath)
-
+for filepath in list_of_files: #looking for the directory
+    filepath = Path(filepath) #converting path to operating system format, forward or backward slash
+    filedir, filename = os.path.split(filepath) 
+#checking if file directry is empty
+#folder creation
     if filedir != "":
-        os.makedirs(filedir, exist_ok=True)
-        logging.info(f"Creating directory:{filedir} for the file {filename}")
+        os.makedirs(filedir, exist_ok=True)#if folder is not present it creates
+        logging.info(f"Creating directory:{filedir} for the file {filename}")# logging info
 
-    
+    #creating files
+    #checking that files dont exist, checking size of file, if file size is zero, file will be created 
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath,'w') as f:
             pass
-            logging.info(f"Creating empty file: {filepath}")
+            logging.info(f"Creating empty file: {filepath}")# logging the info
 
 
     
